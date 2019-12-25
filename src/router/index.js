@@ -4,15 +4,11 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 const routes = [{
     path: '/',
-    redirect: "/visjs"
+    redirect: "/toposhow"
   },
   {
-    path: '/topo',
-    component: () => import('../views/topo.vue')
-  },
-  {
-    path: '/visjs',
-    component: () => import('../views/visjs.vue')
+    path: '/toposhow',
+    component: () => import('../views/toposhow.vue')
   }
 
 ];

@@ -140,10 +140,15 @@
   }
 }
 .deal_wrap {
-  background: rgb(240, 241, 241);
-  padding: 20px 50px;
+  background: #101722;
   width: 100%;
-  height: 1290px;
+  height: 100%;
+  padding: 36px;
+  padding-top: 69px;
+  .el-main {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0;
+  }
 }
 .el-menu--collapse .el-menu .el-submenu,
 .el-menu--popup {
