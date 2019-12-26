@@ -28,6 +28,18 @@
       </el-card>
     </div>
     <div id="mynetwork"></div>
+    <div class="scroll">
+      <ul class="hint">
+        <li>请</li>
+        <li>在</li>
+        <li>此</li>
+        <li>处</li>
+        <li>上</li>
+        <li>下</li>
+        <li>滑</li>
+        <li>动</li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -143,18 +155,34 @@ export default {
 body {
   color: #d3d3d3;
   font: 12pt arial;
-  background-color: #fff;
+  background-color: #404a5a;
 }
 .san {
   .mask {
     background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 58px;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     height: 70px;
-    left: 32px;
     border-radius: 6px;
+  }
+  .scroll {
+    width: 8%;
+    // height: 100%;
+    // background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 19%;
+    left: 93%;
+    .hint {
+      margin-top: 100px;
+      li {
+        margin-top: 20px;
+        list-style: none;
+        font-size: 15px;
+        color: white;
+      }
+    }
   }
   .operation_box {
     background-color: rgba(0, 0, 0, 0.3);
@@ -186,7 +214,7 @@ body {
 
   #mynetwork {
     width: 100%;
-    height: 500px;
+    height: 700px;
     background-color: #404a5a;
   }
   .el-row {

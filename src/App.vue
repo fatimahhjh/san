@@ -53,7 +53,7 @@
           </el-col>
         </el-row>
       </el-header>
-      <div class="deal_wrap">
+      <div class="content_wrap">
         <el-main>
           <router-view></router-view>
         </el-main>
@@ -139,15 +139,16 @@
     }
   }
 }
-.deal_wrap {
+.content_wrap {
   background: #101722;
   width: 100%;
   height: 100%;
   padding: 36px;
   padding-top: 69px;
   .el-main {
-    background: rgba(255, 255, 255, 0.9);
+    background: #404a5a;
     padding: 0;
+    width: 97%;
   }
 }
 .el-menu--collapse .el-menu .el-submenu,
@@ -158,20 +159,29 @@
 
 <script>
 import { getCookie } from "./utils/getCookie.js";
+import { getUserInfo } from "./utils/getUserInfo.js";
 export default {
   data() {
     return {
-      userid: "",
+      userid: "aa",
+      userName: "",
       activeIndex: "1"
     };
   },
   methods: {
-    login() {
-      window.location.href = "/login?next=" + window.location.href;
-    },
-    // handleSelect(key, keyPath) {
-    //   console.log(key, keyPath);
+    // login() {
+    //   window.location.href = "/login?next=" + window.location.href;
     // },
+    handleSelect(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    loadUser() {
+      getUserInfo().then(res => {
+        if (res.data.success) {
+          this.userName = res.data.userName;
+        }
+      });
+    },
     logout() {
       //弹出确认对话框
       //用户点击确认，跳回用户登录页面，清除token
@@ -194,7 +204,8 @@ export default {
   },
   mounted() {
     // document.cookie = "username";
-    this.userid = getCookie("userName");
+    // this.userid = getCookie("userName");
+    // this.loadUser()
   }
 };
 </script>
