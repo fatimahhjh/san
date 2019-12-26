@@ -34,11 +34,11 @@
                   text-color="white"
                   active-text-color="white"
                 >
-                  <el-menu-item v-if="!userid" index="1" @click="login">
+                  <!-- <el-menu-item v-if="!userid" index="1" @click="login">
                     <i class="el-icon-user-solid"></i>
                     登录
-                  </el-menu-item>
-                  <el-submenu v-else index="2">
+                  </el-menu-item> -->
+                  <el-submenu index="2">
                     <template slot="title" class="login_text">
                       <i class="el-icon-user-solid"></i>
                       {{ userid }}
@@ -169,9 +169,9 @@ export default {
     login() {
       window.location.href = "/login?next=" + window.location.href;
     },
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
-    },
+    // handleSelect(key, keyPath) {
+    //   console.log(key, keyPath);
+    // },
     logout() {
       //弹出确认对话框
       //用户点击确认，跳回用户登录页面，清除token

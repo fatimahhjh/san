@@ -112,19 +112,21 @@ export default {
     },
     // 展示全部交换机互联方法
     showAll() {
+      this.getNodesEdges();
       this.initTopo(this.nodeData, this.edgeData);
     },
     // 查找指定交换机互联图
     showSpecific() {
-      this.$http.get('getnodes',{
-        params:this.queryInfo
-      })
-      .then(res=>{
-        console.log(res.data)
-      })
-      .catch(res=>{
-        this.$message.error("查找失败！")
-      })
+      this.$http
+        .get("getnodes", {
+          params: this.queryInfo
+        })
+        .then(res => {
+          console.log(res.data);
+        })
+        .catch(res => {
+          this.$message.error("查找失败！");
+        });
     }
   },
   //生命周期 - 创建完成（可以访问当前this实例）
@@ -144,14 +146,13 @@ body {
   background-color: #fff;
 }
 .san {
-  position: relative;
   .mask {
     background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 58px;
     width: 95%;
     margin: 0 auto;
-    height: 69px;
+    height: 70px;
     left: 32px;
     border-radius: 6px;
   }
@@ -166,9 +167,19 @@ body {
     .search_box {
       float: left;
       margin-left: 58px;
-
+      .el-button--mini,
+      .el-button--small {
+        font-size: 12px;
+        border-radius: 0px;
+        margin-left: -6px;
+      }
       .search {
         width: 200px;
+      }
+      /deep/.el-input--mini .el-input__inner {
+        height: 28px;
+        line-height: 28px;
+        border-radius: 0px;
       }
     }
   }
