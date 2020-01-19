@@ -9,7 +9,7 @@ import '../src/iconfonts/icons/iconfont.css';
 import axios from 'axios'//引入axios
 Vue.prototype.$http = axios;//把axios挂载到vue上
 // 配置请求的根路径
-// axios.defaults.baseURL=''
+axios.defaults.baseURL=''
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false;

@@ -77,7 +77,6 @@
   line-height: 64px;
   background: #28364a;
   // background: linear-gradient(to left, #9eaca6, rgb(184, 184, 202), #d8d8db);
-  border-radius: 5px;
   .el_body {
     color: black;
   }

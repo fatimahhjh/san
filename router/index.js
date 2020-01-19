@@ -11,10 +11,6 @@ const routes = [{
   {
     path: '/topo',
     component: () => import('../views/topo.vue')
-  },
-  {
-    path: '/visjs',
-    component: () => import('../views/visjs.vue')
   }
 ];
 

@@ -2,9 +2,9 @@ module.exports = {
   // outputDir: "static",
   publicPath: process.env.NODE_ENV === "production" ? "/static/dist/" : "",
   devServer: {
-    port: 8031,
+    port: 8003,
     open: true,
-    hotOnly:false,
+    hotOnly: false,
     proxy: {
       '/apps/onekey/api/': {
         target: 'http://127.0.0.1:60000',
