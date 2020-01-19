@@ -115,7 +115,7 @@ export default {
           borderWidth: 2
         },
         edges: {
-          width: 4,
+          width: 3,
           length: 600,
               arrows: {
                 to: {enabled: true, scaleFactor: 1, type: 'circle'},
@@ -127,6 +127,7 @@ export default {
                 }},
           font: {
             size: 20,
+            align: "top",
             color: "#ffffff"
           },
           smooth: {
@@ -263,7 +264,7 @@ body {
 
   #mynetwork {
     width: 100%;
-    height: 700px;
+    height: 100%;
     background-color: #404a5a;
   }
 #loadingBar {
@@ -344,7 +345,7 @@ div.outerBorder {
 
 #border {
   position: absolute;
-  top: 10px;
+  top: 5px;
   left: 10px;
   width: 500px;
   height: 23px;
